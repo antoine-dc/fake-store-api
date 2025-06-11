@@ -14,3 +14,13 @@ export const getProducts = async () => {
     throw error;
   }
 };
+
+export const getProductById = async (id) => {
+  try {
+    const response = await apiClient.get(`/products/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Erreur lors de la récupération du produit avec l'ID ${id} :`, error);
+    throw error;
+  }
+};
