@@ -8,6 +8,9 @@ export default function Navbar() {
         <Link href="/">
           <span className="text-2xl font-bold cursor-pointer">Fake Store</span>
         </Link>
+        <Link href="/profile">
+          <span className="text-2xl font-bold cursor-pointer">Profile</span>
+        </Link>
         <Link href="/cart">
           <AiOutlineShoppingCart className="text-2xl cursor-pointer" />
         </Link>
