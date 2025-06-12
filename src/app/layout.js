@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="--font-geist-sans --font-geist-mono antialiased">
+      <body className="antialiased">
         <AuthProvider>
           <CartProvider>
             <Navbar />

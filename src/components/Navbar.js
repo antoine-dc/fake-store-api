@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import DarkLightToggle from "./DarkLightToggle";
 
 export default function Navbar() {
   return (
@@ -14,6 +15,7 @@ export default function Navbar() {
         <Link href="/cart">
           <AiOutlineShoppingCart className="text-2xl cursor-pointer" />
         </Link>
+        <DarkLightToggle />
       </div>
     </nav>
   );
