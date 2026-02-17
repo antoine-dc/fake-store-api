@@ -1,5 +1,6 @@
 "use client";
 import { useCart } from "../../context/CartContext";
+import Image from "next/image";
 
 export default function CartPage() {
   const { cart, updateQuantity, removeFromCart } = useCart();
@@ -14,21 +15,34 @@ export default function CartPage() {
           {cart.map((item) => (
             <li key={item.id} className="flex justify-between items-center">
               <div className="flex items-center space-x-4">
-                <img src={item.image} alt={item.title} className="w-16 h-16" />
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  className="w-16 h-16"
+                />
                 <div>
                   <h2 className="font-bold">{item.title}</h2>
                   <p>${item.price}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-2 py-1 bg-gray-200 text-gray-600 rounded">
+                <button
+                  onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                  className="px-2 py-1 bg-gray-200 text-gray-600 rounded"
+                >
                   -
                 </button>
                 <span>{item.quantity}</span>
-                <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="px-2 py-1 bg-gray-200 text-gray-600  rounded">
+                <button
+                  onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                  className="px-2 py-1 bg-gray-200 text-gray-600  rounded"
+                >
                   +
                 </button>
-                <button onClick={() => removeFromCart(item.id)} className="px-4 py-1 bg-red-500 text-white rounded">
+                <button
+                  onClick={() => removeFromCart(item.id)}
+                  className="px-4 py-1 bg-red-500 text-white rounded"
+                >
                   Supprimer
                 </button>
               </div>
