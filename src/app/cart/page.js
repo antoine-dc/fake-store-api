@@ -19,6 +19,8 @@ export default function CartPage() {
                   src={item.image}
                   alt={item.title}
                   className="w-16 h-16"
+                  width={200}
+                  height={200}
                 />
                 <div>
                   <h2 className="font-bold">{item.title}</h2>

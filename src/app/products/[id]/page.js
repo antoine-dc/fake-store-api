@@ -36,6 +36,8 @@ export default function Product({ params }) {
               src={product.image}
               alt={product.title}
               className="w-full h-auto max-w-md rounded-lg shadow-md"
+              width={200}
+              height={200}
             />
           </div>
           <div className="space-y-4">

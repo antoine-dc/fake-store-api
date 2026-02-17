@@ -10,11 +10,13 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div className="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+    <div className="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow relative block">
       <Image
         src={product.image}
         alt={product.title}
         className="h-40 w-auto mx-auto object-contain mb-4"
+        width={200}
+        height={200}
       />
       <h2 className="text-lg font-semibold">
         <Link href={`/products/${product.id}`}>{product.title}</Link>
